@@ -4,9 +4,6 @@ imports:
     - { resource: sonata.yml }
     - { resource: sonata-admin.yml }
 
-parameters:
-    locale: es
-
 framework:
     #esi:             ~
     translator:      { fallback: "%locale%" }

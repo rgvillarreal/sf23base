@@ -39,7 +39,7 @@ sonata_news:
 
     comment:
         notification:
-            emails:   [rodrigogvillarreal@gmail.net]
+            emails:   [rodrigogvillarreal@gmail.com]
             from:     no-reply@sonata-project.org
             template: 'SonataNewsBundle:Mail:comment_notification.txt.twig'
 
