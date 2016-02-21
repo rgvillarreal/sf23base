@@ -8,6 +8,14 @@ sonata_block:
         sonata.user.block.menu:    # used to display the menu in profile pages
         sonata.user.block.account: # used to display menu option (login option)
 
+sonata_admin:
+    templates:
+        dashboard: SonataAdminBundle:Core:dashboard.html.twig
+    title:      Panel de Administración
+    title_logo: favicon.ico
+    options:
+        title_mode: 'both'
+
 sonata_user:
     security_acl: true
     manager_type: orm # can be orm or mongodb
@@ -21,3 +29,175 @@ fos_user:
         group_manager: sonata.user.orm.group_manager                    # If you're using doctrine orm (use sonata.user.mongodb.user_manager for mongodb)
     service:
         user_manager: sonata.user.orm.user_manager                      # If you're using doctrine orm (use sonata.user.mongodb.group_manager for mongodb)
+
+sonata_news:
+    title:        RGV Labs News
+    link:         http://rgvlabs.com
+    description:  Sistema Noticias/Blog
+    salt:         'secureToken'
+    permalink_generator: sonata.news.permalink.date # sonata.news.permalink.category
+
+    comment:
+        notification:
+            emails:   [rodrigogvillarreal@gmail.net]
+            from:     no-reply@sonata-project.org
+            template: 'SonataNewsBundle:Mail:comment_notification.txt.twig'
+
+    class:
+        post:       Application\Sonata\NewsBundle\Entity\Post
+        comment:    Application\Sonata\NewsBundle\Entity\Comment
+        media:      Application\Sonata\MediaBundle\Entity\Media
+        user:       Application\Sonata\UserBundle\Entity\User
+
+sonata_media:
+    # if you don't use default namespace configuration
+    #class:
+    #    media: MyVendor\MediaBundle\Entity\Media
+    #    gallery: MyVendor\MediaBundle\Entity\Gallery
+    #    gallery_has_media: MyVendor\MediaBundle\Entity\GalleryHasMedia
+    default_context: default
+    db_driver: doctrine_orm # or doctrine_mongodb, doctrine_phpcr
+    contexts:
+        default:  # the default context is mandatory
+            providers:
+                - sonata.media.provider.dailymotion
+                - sonata.media.provider.youtube
+                - sonata.media.provider.image
+                - sonata.media.provider.file
+
+            formats:
+                small: { width: 100 , quality: 70}
+                big:   { width: 500 , quality: 70}
+        news:
+            providers:
+                - sonata.media.provider.dailymotion
+                - sonata.media.provider.youtube
+                - sonata.media.provider.image
+
+            formats:
+                small: { width: 150 , quality: 95}
+                big:   { width: 500 , quality: 90}
+
+    cdn:
+        server:
+            path: /uploads/media # http://media.sonata-project.org/
+
+    filesystem:
+        local:
+            directory:  %kernel.root_dir%/../web/uploads/media
+            create:     false
+
+sonata_formatter:
+    formatters:
+        markdown:
+            service: sonata.formatter.text.markdown
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+#                - sonata.media.formatter.twig
+
+        text:
+            service: sonata.formatter.text.text
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+#                - sonata.media.formatter.twig
+
+        rawhtml:
+            service: sonata.formatter.text.raw
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+#                - sonata.media.formatter.twig
+
+        richhtml:
+            service: sonata.formatter.text.raw
+            extensions:
+                - sonata.formatter.twig.control_flow
+                - sonata.formatter.twig.gist
+#                - sonata.media.formatter.twig
+
+sonata_seo:
+    encoding:         UTF-8
+    page:
+        default: sonata.seo.page.default
+        title:            Sonata Project
+        default:          sonata.seo.page.default
+        metas:
+            name:
+                keywords:             foo bar
+                description:          The description
+                robots:               index, follow
+
+            property:
+                # Facebook application settings
+                #'fb:app_id':          XXXXXX
+                #'fb:admins':          admin1, admin2
+
+                # Open Graph information
+                # see http://developers.facebook.com/docs/opengraphprotocol/#types or http://ogp.me/
+                'og:site_name':       Sonata Project Sandbox
+                'og:description':     A demo of the some rich bundles for your Symfony2 projects
+
+            http-equiv:
+                'Content-Type':         text/html; charset=utf-8
+                #'X-Ua-Compatible':      IE=EmulateIE7
+
+            charset:
+                UTF-8:    ''
+
+        head:
+            'xmlns':              http://www.w3.org/1999/xhtml
+            'xmlns:og':           http://opengraphprotocol.org/schema/
+            #'xmlns:fb':           "http://www.facebook.com/2008/fbml"
+
+sonata_cache:
+    caches:
+        esi:
+            token: an unique security key # a random one is generated by default
+            servers:
+                - varnishadm -T 127.0.0.1:2000 {{ COMMAND }} "{{ EXPRESSION }}"
+
+        ssi:
+            token: an unique security key # a random one is generated by default
+
+#        mongo:
+#            database:   cache
+#            collection: cache
+#            servers:
+#                - {host: 127.0.0.1, port: 27017, user: username, password: pASS'}
+#                - {host: 127.0.0.2}
+
+#        memcached:
+#            prefix: test     # prefix to ensure there is no clash between instances
+#            servers:
+#                - {host: 127.0.0.1, port: 11211, weight: 0}
+
+#        predis:
+#            servers:
+#                - {host: 127.0.0.1, port: 6379, database: 42}
+
+#        apc:
+#            token:  s3cur3   # token used to clear the related cache
+#            prefix: test     # prefix to ensure there is no clash between instances
+#            servers:
+#                - { domain: kooqit.local, ip: 127.0.0.1, port: 80 }
+#            timeout:
+#                RCV: { sec: 5, usec: 0 }
+#                SND: { sec: 5, usec: 0 }
+
+        symfony:
+            token: s3cur3 # token used to clear the related cache
+            php_cache_enabled: true # Optional (default: false), clear APC or PHP OPcache
+            types: [mytype1, mycustomtype2] # Optional, you can restrict allowed cache types
+            servers:
+                - { domain: kooqit.local, ip: 127.0.0.1, port: 80}
+
+sonata_translation:
+    locales: [en, fr, it, nl, es]
+    default_locale: es
+    # here enable the types you need
+    gedmo:
+        enabled: true
+    #phpcr:
+    #    enabled: true
