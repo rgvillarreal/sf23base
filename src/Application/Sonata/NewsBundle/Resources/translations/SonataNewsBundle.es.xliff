@@ -104,8 +104,8 @@
             </trans-unit>
             <trans-unit id="mail_title_comment_notification">
                 <source>mail_title_comment_notification</source>
-                <target>Alguien ha comentado el artículo '%post_title%' en la Noticia '%blog_title%'
-Alguien ha comntado el artículo "%post_title%" en la Noticia "%blog_title%"
+                <target>Alguien ha comentado el artículo '%post_title%' en el blog '%blog_title%'
+Alguien ha comntado el artículo "%post_title%" en el blog "%blog_title%"
 
 Artículo: %post_title% - %post_url%
 De: %comment_name%
@@ -154,10 +154,6 @@ Modera el comentario de forma rápida :
             <trans-unit id="list_label_comments_count">
                 <source>list.label_comments_count</source>
                 <target>Número de comentarios</target>
-            </trans-unit>
-            <trans-unit id="list_label_publication_date_start ">
-                <source>list.label_publication_date_start</source>
-                <target>Fecha de Publicación</target>
             </trans-unit>
             <trans-unit id="form_label_enabled">
                 <source>form.label_enabled</source>
