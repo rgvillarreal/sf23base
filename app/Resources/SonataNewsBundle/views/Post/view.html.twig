@@ -31,6 +31,8 @@
             <span class="sonata-blog-post-author">{{ 'archive_author'|trans({'%author%': post.author }, 'SonataNewsBundle') }}</span>
         </h1>
 
+        <div class="sonata-blog-post-information">Categoría: {{ post.collection.name }}</div>
+
         <div class="sonata-blog-post-information">
             <div class="sonata-blog-post-tag-container">
                 <div class="sonata-blog-post-tag-title">
@@ -51,7 +53,7 @@
     </header>
 
     <div class="sonata-blog-post-content">
-        {% media post.image, 'big' %}{{ post.content|raw }}
+        <a href="{% path post.image, 'reference' %}">{% media post.image, 'big' %}</a>{{ post.content|raw }}<br />
     </div>
 
     {% render(controller('SonataNewsBundle:Post:comments', {'postId': post.id})) %}
