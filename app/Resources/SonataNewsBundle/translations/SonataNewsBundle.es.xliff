@@ -177,7 +177,7 @@ Modera el comentario de forma rápida :
             </trans-unit>
             <trans-unit id="form_label_abstract">
                 <source>form.label_abstract</source>
-                <target>Observaciones</target>
+                <target>Descripción</target>
             </trans-unit>
             <trans-unit id="form_label_content">
                 <source>form.label_content</source>
