@@ -68,7 +68,12 @@ doctrine:
 #            default:
 #                mappings:
 #                    ApplicationSonataUserBundle: ~
-#                    SonataUserBundle: ~                
+#                    SonataUserBundle: ~
+#                    ApplicationSonataNewsBundle: ~
+#                    SonataNewsBundle: ~
+#                    SonataMediaBundle: ~
+#                    ApplicationSonataClassificationBundle: ~
+#                    SonataClassificationBundle: ~
         auto_generate_proxy_classes: "%kernel.debug%"
         auto_mapping: true
         

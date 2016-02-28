@@ -50,6 +50,12 @@ sonata_news:
         media:      Application\Sonata\MediaBundle\Entity\Media
         user:       Application\Sonata\UserBundle\Entity\User
 
+    admin:
+        post:
+            class:       Application\Sonata\NewsBundle\Admin\PostAdmin
+#            controller:  SonataAdminBundle:CRUD
+#            translation: ApplicationSonataNewsBundle
+
 sonata_media:
     # if you don't use default namespace configuration
     #class:
@@ -91,26 +97,26 @@ sonata_media:
 
 sonata_formatter:
     formatters:
-        markdown:
-            service: sonata.formatter.text.markdown
-            extensions:
-                - sonata.formatter.twig.control_flow
-                - sonata.formatter.twig.gist
-                - sonata.media.formatter.twig
-
-        text:
-            service: sonata.formatter.text.text
-            extensions:
-                - sonata.formatter.twig.control_flow
-                - sonata.formatter.twig.gist
-                - sonata.media.formatter.twig
-
-        rawhtml:
-            service: sonata.formatter.text.raw
-            extensions:
-                - sonata.formatter.twig.control_flow
-                - sonata.formatter.twig.gist
-                - sonata.media.formatter.twig
+#        markdown:
+#            service: sonata.formatter.text.markdown
+#            extensions:
+#                - sonata.formatter.twig.control_flow
+#                - sonata.formatter.twig.gist
+#                - sonata.media.formatter.twig
+#
+#        text:
+#            service: sonata.formatter.text.text
+#            extensions:
+#                - sonata.formatter.twig.control_flow
+#                - sonata.formatter.twig.gist
+#                - sonata.media.formatter.twig
+#
+#        rawhtml:
+#            service: sonata.formatter.text.raw
+#            extensions:
+#                - sonata.formatter.twig.control_flow
+#                - sonata.formatter.twig.gist
+#                - sonata.media.formatter.twig
 
         richhtml:
             service: sonata.formatter.text.raw
