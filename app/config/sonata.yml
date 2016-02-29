@@ -132,8 +132,7 @@ sonata_formatter:
 sonata_seo:
     encoding:         UTF-8
     page:
-        default: sonata.seo.page.default
-        title:            Sonata Project
+        title:            RGV Labs Project
         default:          sonata.seo.page.default
         metas:
             name:
@@ -148,7 +147,7 @@ sonata_seo:
 
                 # Open Graph information
                 # see http://developers.facebook.com/docs/opengraphprotocol/#types or http://ogp.me/
-                'og:site_name':       Sonata Project Sandbox
+                'og:site_name':       RGV Labs Site
                 'og:description':     A demo of the some rich bundles for your Symfony2 projects
 
             http-equiv:
