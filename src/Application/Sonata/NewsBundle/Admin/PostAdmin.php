@@ -80,14 +80,14 @@ class PostAdmin extends Admin
 
                 ))
             ->end()
-            ->with('Tags')
+            ->with('Etiquetas')
                 ->add('tags', 'sonata_type_model', array(
                     'required' => false,
                     'expanded' => true,
                     'multiple' => true,
                 ))
             ->end()
-            ->with('Options')
+            ->with('Opciones')
                 ->add('publicationDateStart')
                 ->add('commentsCloseAt')
                 ->add('commentsEnabled', null, array('required' => false))
