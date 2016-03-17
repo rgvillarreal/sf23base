@@ -24,11 +24,11 @@ sonata_admin:
                     - sonata.user.admin.user
                     - sonata.user.admin.group
                 roles: [ ROLE_SUPER_ADMIN, ROLE_ADMIN ]
-            notification:
-                label: Notificaciones
-                items:
-                    - sonata.notification.admin.message
-                roles: [ ROLE_SUPER_ADMIN, ROLE_ADMIN ]
+#            notification:
+#                label: Notificaciones
+#                items:
+#                    - sonata.notification.admin.message
+#                roles: [ ROLE_SUPER_ADMIN, ROLE_ADMIN ]
             classification:
                 label: Clasificaciones
                 items:
