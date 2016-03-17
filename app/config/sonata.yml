@@ -16,6 +16,40 @@ sonata_admin:
     title_logo: favicon.ico
     options:
         title_mode: 'both'
+    dashboard:
+        groups:
+            user:
+                label: Usuarios
+                items:
+                    - sonata.user.admin.user
+                    - sonata.user.admin.group
+                roles: [ ROLE_SUPER_ADMIN, ROLE_ADMIN ]
+            notification:
+                label: Notificaciones
+                items:
+                    - sonata.notification.admin.message
+                roles: [ ROLE_SUPER_ADMIN, ROLE_ADMIN ]
+            classification:
+                label: Clasificaciones
+                items:
+                    - sonata.classification.admin.category
+                    - sonata.classification.admin.tag
+                    - sonata.classification.admin.collection
+                roles: [ ROLE_SUPER_ADMIN, ROLE_ADMIN, ROLE_ADMIN_CONTENT ]
+            media:
+                label: Multimedia
+                items:
+                    - sonata.media.admin.media
+                    - sonata.media.admin.gallery
+            news:
+                label:                Noticias
+                label_catalogue:      ~
+                items:
+                    - sonata.news.admin.post
+                roles: [ ROLE_SUPER_ADMIN, ROLE_ADMIN, ROLE_ADMIN_CONTENT, ROLE_REDACTOR ]
+
+sonata_notification:
+    backend: sonata.notification.backend.runtime
 
 sonata_user:
     security_acl: true

@@ -2,7 +2,6 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: sonata.yml }
-    - { resource: sonata-admin.yml }
 
 framework:
     #esi:             ~
