@@ -7,9 +7,10 @@
         <meta name="description" content="{% block description %}{% endblock description %}">
         <meta name="author" content="Rodrigo Villarreal">
         <title>{% block title %}{% endblock title %}</title>
-        {% stylesheets '@bootstrap_less' '@bootstrap_theme' '@fa_css' combine=true %}
+        {% stylesheets '@bootstrap_less' '@bootstrap_theme' combine=true %} {#'@fa_css'#}
           <link href="{{ asset_url }}" type="text/css" rel="stylesheet" />
         {% endstylesheets %}
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <link href="{{ asset('bundles/rgvsite/css/ie10-viewport-bug-workaround.css') }}" rel="stylesheet">
         {% block stylesheets %}{% endblock stylesheets %}
