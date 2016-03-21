@@ -23,6 +23,7 @@ sonata_admin:
                 items:
                     - sonata.user.admin.user
                     - sonata.user.admin.group
+                    - rgv_site.admin.config
                 roles: [ ROLE_SUPER_ADMIN, ROLE_ADMIN ]
 #            notification:
 #                label: Notificaciones
@@ -41,11 +42,13 @@ sonata_admin:
                 items:
                     - sonata.media.admin.media
                     - sonata.media.admin.gallery
+                    - sonata.media.admin.gallery_has_media
             news:
                 label:                Noticias
                 label_catalogue:      ~
                 items:
                     - sonata.news.admin.post
+                    - sonata.news.admin.comment
                 roles: [ ROLE_SUPER_ADMIN, ROLE_ADMIN, ROLE_ADMIN_CONTENT, ROLE_REDACTOR ]
 
 sonata_notification:
