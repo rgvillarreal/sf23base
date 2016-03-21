@@ -1,0 +1,3 @@
+corporate_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: CorporateBundle:Default:index }
