@@ -29,6 +29,9 @@ twig:
     form:
         resources:
             - 'SonataFormatterBundle:Form:formatter.html.twig'
+    globals:
+        body:
+            class: bodyclass
 
 # Assetic Configuration
 assetic:
