@@ -21,7 +21,7 @@
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body class="{{ body.class }}">
         {% block body %}{% endblock body %}
         {% javascripts '@jquery_js' '@bootstrap_js' filter='?yui_js' combine=true %}
            <script src="{{ asset_url }}"></script>
