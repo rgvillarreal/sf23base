@@ -7,5 +7,9 @@ rgv_help_homepage:
     defaults: { _controller: RGVSiteBundle:Default:help }
     
 rgv_static_page:
-    path:     /page/{page}/
-    defaults: { _controller: RGVSiteBundle:Site:static }    
+    path:     /pagina/{page}/
+    defaults: { _controller: RGVSiteBundle:Site:static }
+
+rgv_contacto_page:
+    path:     /contacto
+    defaults: { _controller: RGVSiteBundle:Site:contacto }

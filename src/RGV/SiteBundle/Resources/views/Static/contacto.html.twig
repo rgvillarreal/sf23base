@@ -1,0 +1,27 @@
+{% extends '::template_base.html.twig' %}
+
+{% block page_title %}Formulario de Contacto{% endblock %}
+
+{% block page_body %}
+
+    <header>
+        <h1>Formulario de Contacto</h1>
+    </header>
+
+    <p>Quieres hacer una consulta?</p>
+
+    <form action="{{ path('rgv_contacto_page') }}" method="post" {{ form_enctype(form) }} class="">
+        {{ form_errors(form) }}
+
+        {{ form_row(form.nombre) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.contenido) }}
+
+        {{ form_rest(form) }}
+
+        <input type="submit" value="Enviar" />
+    </form>
+
+{% endblock %}
+
+
