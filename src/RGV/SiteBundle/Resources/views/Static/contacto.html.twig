@@ -1,6 +1,6 @@
 {% extends '::template_base.html.twig' %}
 
-{% block page_title %}Formulario de Contacto{% endblock %}
+{% block page_title %} - Formulario de Contacto{% endblock %}
 
 {% block page_body %}
 
@@ -15,7 +15,7 @@
 
         {{ form_row(form.nombre) }}
         {{ form_row(form.email) }}
-        {{ form_row(form.contenido) }}
+        {{ form_row(form.mensaje) }}
 
         {{ form_rest(form) }}
 
