@@ -1,0 +1,25 @@
+{% extends 'RGVSiteBundle:Templates:error.html.twig' %}
+
+{% block page_body %}
+
+    {% if app.user and is_granted('IS_AUTHENTICATED_FULLY') %}
+        {# ... #}
+    {% endif %}
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="jumbotron">
+                        <h1>Ups, se produjo un error</h1>
+                        <p></p>
+                        <p>
+                            <a href="{{ path('rgv_site_homepage') }}">Volver a la pagina principal</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
