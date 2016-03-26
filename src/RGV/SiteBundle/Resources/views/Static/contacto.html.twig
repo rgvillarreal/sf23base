@@ -10,6 +10,14 @@
 
     <p>Quieres hacer una consulta?</p>
 
+    {% for type, messages in app.session.flashbag.all() %}
+        {% for message in messages %}
+            <div class="alert alert-{{ type }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
     <form action="{{ path('rgv_contacto_page') }}" method="post" {{ form_enctype(form) }} class="">
         {{ form_errors(form) }}
 
