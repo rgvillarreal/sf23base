@@ -1,0 +1,7 @@
+{% extends 'template_email.html.twig' %}
+
+{% block body %}
+    Nuevo mensaje de {{ nombre }} ({{ ip }})<br/>
+    Email: {{ email }}<br/><br/>
+    {{ mensaje|raw }}
+{% endblock body %}
