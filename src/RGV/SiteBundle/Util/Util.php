@@ -30,13 +30,15 @@ class Util
             ->setSubject($subject)
             ->setFrom($from)
             ->setTo($to)
+            ->setReplyTo($from)
             ->setBody(
                 $controller->renderView(
                     $template,
                     $options
-                )
+                ),
+                'text/html'
             );
 
-        $controller->get('mailer')->send($message);
+        return $controller->get('mailer')->send($message);
     }
 }
