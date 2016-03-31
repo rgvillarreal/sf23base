@@ -53,19 +53,19 @@ assetic:
     assets:
         bootstrap_less:
             inputs:
-                - 'bundles/rgvsite/dist/bootstrap/3.3.6/css/bootstrap.min.css'
+                - '%kernel.root_dir%/../web/bundles/rgvsite/dist/bootstrap/3.3.6/css/bootstrap.min.css'
         bootstrap_theme:
             inputs:
-                - 'bundles/rgvsite/dist/bootstrap/3.3.6/css/bootstrap-theme.min.css'
+                - '%kernel.root_dir%/../web/bundles/rgvsite/dist/bootstrap/3.3.6/css/bootstrap-theme.min.css'
         fa_css:
             inputs:
-                - 'bundles/rgvsite/dist/font-awesome/4.5.0/css/font-awesome.min.css'
+                - '%kernel.root_dir%/../web/bundles/rgvsite/dist/font-awesome/4.5.0/css/font-awesome.min.css'
         jquery_js:
             inputs:
-                - 'bundles/rgvsite/dist/jquery/2.2.2/jquery.min.js'
+                - '%kernel.root_dir%/../web/bundles/rgvsite/dist/jquery/2.2.2/jquery.min.js'
         bootstrap_js:
             inputs:
-                - 'bundles/rgvsite/dist/bootstrap/3.3.6/js/bootstrap.min.js'
+                - '%kernel.root_dir%/../web/bundles/rgvsite/dist/bootstrap/3.3.6/js/bootstrap.min.js'
 
 # Doctrine Configuration
 doctrine:
