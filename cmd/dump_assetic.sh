@@ -1,0 +1,1 @@
+app/console assetic:dump --watch
