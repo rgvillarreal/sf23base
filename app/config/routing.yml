@@ -1,3 +1,7 @@
+templates_porto:
+    resource: "@TemplatesPortoBundle/Resources/config/routing.yml"
+    prefix:   /
+
 corporate:
     resource: "@CorporateBundle/Resources/config/routing.yml"
     prefix:   /
