@@ -21,7 +21,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new AppBundle\AppBundle(),
+            new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             //RGVBundles
             new RGV\SiteBundle\RGVSiteBundle(),
             new Templates\PortoBundle\TemplatesPortoBundle(),
@@ -47,9 +47,6 @@ class AppKernel extends Kernel
             new Sonata\CacheBundle\SonataCacheBundle(),
             new Sonata\IntlBundle\SonataIntlBundle(),
             new Sonata\TranslationBundle\SonataTranslationBundle(),
-            //WidopGoogleAnalyticsBundle
-            new Widop\GoogleAnalyticsBundle\WidopGoogleAnalyticsBundle(),
-            new Widop\HttpAdapterBundle\WidopHttpAdapterBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {           
