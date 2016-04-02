@@ -25,7 +25,6 @@ sonata_admin:
                 items:
                     - sonata.user.admin.user
                     - sonata.user.admin.group
-                    - rgv_site.admin.config
                 roles: [ ROLE_SUPER_ADMIN, ROLE_ADMIN ]
 #            notification:
 #                label: Notificaciones
