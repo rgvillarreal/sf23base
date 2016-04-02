@@ -1,0 +1,27 @@
+RGV\SiteBundle\Entity\Seccion:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: 255
+        slug:
+            type: string
+            length: '500'
+        titulo:
+            type: string
+            length: 255
+        descripcion:
+            type: string
+            length: '4000'
+        activo:
+            type: boolean
+        contenido:
+            type: text
+    lifecycleCallbacks: {  }
