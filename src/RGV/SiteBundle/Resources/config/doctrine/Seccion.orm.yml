@@ -14,6 +14,12 @@ RGV\SiteBundle\Entity\Seccion:
         slug:
             type: string
             length: '500'
+            gedmo:
+              slug:
+                separator: -
+                style: camel
+                fields:
+                  - nombre
         titulo:
             type: string
             length: 255

@@ -16,12 +16,10 @@ class SeccionAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('id')
+            ->add('activo')
             ->add('nombre')
-            ->add('slug')
             ->add('titulo')
             ->add('descripcion')
-            ->add('activo')
             ->add('contenido')
         ;
     }
@@ -32,13 +30,10 @@ class SeccionAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->add('id')
             ->add('nombre')
-            ->add('slug')
             ->add('titulo')
             ->add('descripcion')
-            ->add('activo')
-            ->add('contenido')
+            ->add('activo', null, array('editable' => true))
             ->add('_action', 'actions', array(
                 'actions' => array(
                     'show' => array(),
@@ -55,13 +50,11 @@ class SeccionAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('id')
+            ->add('activo')
             ->add('nombre')
-            ->add('slug')
             ->add('titulo')
             ->add('descripcion')
-            ->add('activo')
-            ->add('contenido')
+            ->add('contenido', 'ckeditor')
         ;
     }
 
@@ -80,4 +73,5 @@ class SeccionAdmin extends Admin
             ->add('contenido')
         ;
     }
+
 }
