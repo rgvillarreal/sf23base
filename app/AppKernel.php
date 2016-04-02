@@ -24,6 +24,8 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             //RGVBundles
             new RGV\SiteBundle\RGVSiteBundle(),
+            new RGV\CorporateBundle\CorporateBundle(),
+            new Templates\PortoBundle\TemplatesPortoBundle(),
             //Dependencias
             new FOS\UserBundle\FOSUserBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
@@ -46,8 +48,9 @@ class AppKernel extends Kernel
             new Sonata\CacheBundle\SonataCacheBundle(),
             new Sonata\IntlBundle\SonataIntlBundle(),
             new Sonata\TranslationBundle\SonataTranslationBundle(),
-            new RGV\CorporateBundle\CorporateBundle(),
-            new Templates\PortoBundle\TemplatesPortoBundle(),
+            //WidopGoogleAnalyticsBundle
+            new Widop\GoogleAnalyticsBundle\WidopGoogleAnalyticsBundle(),
+            new Widop\HttpAdapterBundle\WidopHttpAdapterBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {           
