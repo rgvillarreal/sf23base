@@ -24,7 +24,6 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             //RGVBundles
             new RGV\SiteBundle\RGVSiteBundle(),
-            new RGV\CorporateBundle\CorporateBundle(),
             new Templates\PortoBundle\TemplatesPortoBundle(),
             //Dependencias
             new FOS\UserBundle\FOSUserBundle(),

@@ -2,17 +2,9 @@ templates_porto:
     resource: "@TemplatesPortoBundle/Resources/config/routing.yml"
     prefix:   /
 
-corporate:
-    resource: "@CorporateBundle/Resources/config/routing.yml"
-    prefix:   /
-
 rgv_site:
     resource: "@RGVSiteBundle/Resources/config/routing.yml"
     prefix:   /
-
-app:
-    resource: @AppBundle/Controller/
-    type:     annotation
 
 admin:
     resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
