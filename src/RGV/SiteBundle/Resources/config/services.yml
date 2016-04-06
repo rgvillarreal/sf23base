@@ -7,3 +7,9 @@ services:
         arguments: [~, RGV\SiteBundle\Entity\Seccion, SonataAdminBundle:CRUD]
         tags:
             - {name: sonata.admin, manager_type: orm, group: admin, label: Seccion}
+
+    rgv_site.admin.config:
+        class: RGV\SiteBundle\Admin\ConfigAdmin
+        arguments: [~, RGV\SiteBundle\Entity\Config, RGVSiteBundle:ConfigAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Config}

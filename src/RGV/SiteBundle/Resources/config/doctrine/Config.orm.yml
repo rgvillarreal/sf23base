@@ -1,0 +1,20 @@
+RGV\SiteBundle\Entity\Config:
+    type: entity
+    table: rgvsite_config
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: 255
+        valor:
+            type: string
+            length: '4000'
+        tipo:
+            type: string
+            length: '10'
+    lifecycleCallbacks: {  }
