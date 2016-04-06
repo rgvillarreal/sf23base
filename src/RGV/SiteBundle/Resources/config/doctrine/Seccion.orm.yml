@@ -1,6 +1,6 @@
 RGV\SiteBundle\Entity\Seccion:
     type: entity
-    table: null
+    table: rgvsite_seccion
     id:
         id:
             type: integer

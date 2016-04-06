@@ -1,6 +1,6 @@
 RGV\SiteBundle\Entity\Contacto:
     type: entity
-    table: null
+    table: rgvsite_contacto
     id:
         id:
             type: integer
